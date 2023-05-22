@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Phase1 Suite">
+
+    <listeners>
+        <listener class-name="listeners.Listener"/>
+    </listeners>
+
+    <!--    <test name="Test" >-->
+    <test thread-count="1" name="Test">
+
+        <classes>
+            <class name="FacebookPost">
+                <methods>
+                    <include name="loginAndPublishPostOnFacebook"/>
+
+                </methods>
+            </class>
+
+            <class name="WalletHubReviewTests">
+                <methods>
+                    <include name="writeAReviewAndAssert"/>
+
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
